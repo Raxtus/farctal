@@ -1,6 +1,7 @@
 #include <iostream>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_image.h>
 
 int X_MOVE = 800;
 int Y_MOVE = 300;
@@ -48,6 +49,7 @@ int main()
 {
 	if (!al_init()) return -1;
 	if (!al_init_primitives_addon()) return -1;
+	if (!al_init_image_addon()) return -1;
 
 	int z = 3;
 	int dim = power(3, z);;
@@ -63,6 +65,7 @@ int main()
 	al_install_keyboard();
 	al_register_event_source(queue, al_get_display_event_source(window));
 	al_register_event_source(queue, al_get_keyboard_event_source());
+
 
 	fractal = al_create_bitmap(dim, dim);
 
@@ -132,6 +135,7 @@ int main()
 				done = 1;
 				break;
 			case ALLEGRO_KEY_S:
+				cout << "zapis" << endl;
 				al_save_bitmap("fractal.bmp", fractal);
 				break;
 			default:
