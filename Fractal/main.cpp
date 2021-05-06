@@ -96,16 +96,16 @@ int main()
 			switch (event.keyboard.keycode)
 			{
 			case ALLEGRO_KEY_UP:
-				Y_MOVE -= 10;
-				break;
-			case ALLEGRO_KEY_DOWN:
 				Y_MOVE += 10;
 				break;
+			case ALLEGRO_KEY_DOWN:
+				Y_MOVE -= 10;
+				break;
 			case ALLEGRO_KEY_LEFT:
-				X_MOVE -= 10;
+				X_MOVE += 10;
 				break;
 			case ALLEGRO_KEY_RIGHT:
-				X_MOVE += 10;
+				X_MOVE -= 10;
 				break;
 			case ALLEGRO_KEY_W:
 				a += 1;
