@@ -1,0 +1,2 @@
+# farctal
+dywan sierpińskiego 
