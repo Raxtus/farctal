@@ -107,17 +107,17 @@ int main()
 			case ALLEGRO_KEY_RIGHT:
 				X_MOVE += 10;
 				break;
-			case ALLEGRO_KEY_A:
+			case ALLEGRO_KEY_W:
 				a += 1;
 				break;
-			case ALLEGRO_KEY_S:
+			case ALLEGRO_KEY_Q:
 				if (a <= 0) break;
 				a -= 1;
 				break;
-			case ALLEGRO_KEY_D:
+			case ALLEGRO_KEY_R:
 				a += 0.1;
 				break;
-			case ALLEGRO_KEY_F:
+			case ALLEGRO_KEY_E:
 				if (a <= 0) break;
 				a -= 0.1;
 				break;
@@ -130,6 +130,9 @@ int main()
 				if (z <= 0) break;
 				z -= 1;
 				done = 1;
+				break;
+			case ALLEGRO_KEY_S:
+				al_save_bitmap("fractal.bmp", fractal);
 				break;
 			default:
 				break;
